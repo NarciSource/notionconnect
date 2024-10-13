@@ -1,0 +1,232 @@
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:                ^^^^^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:    self.callable = self.load()
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:                    ^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:    return self.load_wsgiapp()
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:           ^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:    return util.import_app(self.app_uri)
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:    mod = importlib.import_module(module)
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "/usr/lib64/python3.11/importlib/__init__.py", line 126, in import_module
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]:  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]: ModuleNotFoundError: No module named 'application'
+Sep 19 07:36:43 ip-172-31-12-0 web[2040]: [2024-09-19 07:36:43 +0000] [2040] [INFO] Worker exiting (pid: 2040)
+Sep 19 07:36:43 ip-172-31-12-0 web[2036]: [2024-09-19 07:36:43 +0000] [2036] [ERROR] Worker (pid:2040) exited with code 3
+Sep 19 07:36:43 ip-172-31-12-0 web[2036]: [2024-09-19 07:36:43 +0000] [2036] [ERROR] Shutting down: Master
+Sep 19 07:36:43 ip-172-31-12-0 web[2036]: [2024-09-19 07:36:43 +0000] [2036] [ERROR] Reason: Worker failed to boot.
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [INFO] Starting gunicorn 23.0.0
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [INFO] Listening at: http://127.0.0.1:8000 (2042)
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [INFO] Using worker: gthread
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]: [2024-09-19 07:36:44 +0000] [2046] [INFO] Booting worker with pid: 2046
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]: [2024-09-19 07:36:44 +0000] [2046] [ERROR] Exception in worker process
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]: Traceback (most recent call last):
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    worker.init_process()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    super().init_process()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    self.load_wsgi()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    self.wsgi = self.app.wsgi()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:                ^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    self.callable = self.load()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:                    ^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    return self.load_wsgiapp()
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:           ^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    return util.import_app(self.app_uri)
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    mod = importlib.import_module(module)
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "/usr/lib64/python3.11/importlib/__init__.py", line 126, in import_module
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]:  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]: ModuleNotFoundError: No module named 'application'
+Sep 19 07:36:44 ip-172-31-12-0 web[2046]: [2024-09-19 07:36:44 +0000] [2046] [INFO] Worker exiting (pid: 2046)
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [ERROR] Worker (pid:2046) exited with code 3
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [ERROR] Shutting down: Master
+Sep 19 07:36:44 ip-172-31-12-0 web[2042]: [2024-09-19 07:36:44 +0000] [2042] [ERROR] Reason: Worker failed to boot.
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [INFO] Starting gunicorn 23.0.0
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [INFO] Listening at: http://127.0.0.1:8000 (2048)
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [INFO] Using worker: gthread
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]: [2024-09-19 07:36:44 +0000] [2052] [INFO] Booting worker with pid: 2052
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]: [2024-09-19 07:36:44 +0000] [2052] [ERROR] Exception in worker process
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]: Traceback (most recent call last):
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    worker.init_process()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    super().init_process()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    self.load_wsgi()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    self.wsgi = self.app.wsgi()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:                ^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    self.callable = self.load()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:                    ^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    return self.load_wsgiapp()
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:           ^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    return util.import_app(self.app_uri)
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    mod = importlib.import_module(module)
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "/usr/lib64/python3.11/importlib/__init__.py", line 126, in import_module
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:    return _bootstrap._gcd_import(name[level:], package, level)
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]:  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]: ModuleNotFoundError: No module named 'application'
+Sep 19 07:36:44 ip-172-31-12-0 web[2052]: [2024-09-19 07:36:44 +0000] [2052] [INFO] Worker exiting (pid: 2052)
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [ERROR] Worker (pid:2052) exited with code 3
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [ERROR] Shutting down: Master
+Sep 19 07:36:44 ip-172-31-12-0 web[2048]: [2024-09-19 07:36:44 +0000] [2048] [ERROR] Reason: Worker failed to boot.
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2024/09/19 07:36:38.856730 [INFO] disable log stream
+2024/09/19 07:36:38.856739 [INFO] Running command: systemctl show -p PartOf amazon-cloudwatch-agent.service
+2024/09/19 07:36:38.870494 [INFO] Running command: systemctl stop amazon-cloudwatch-agent.service
+2024/09/19 07:36:38.883333 [INFO] Executing instruction: GetToggleForceRotate
+2024/09/19 07:36:38.883365 [INFO] Checking if logs need forced rotation
+2024/09/19 07:36:38.883386 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:418272774858:stack/awseb-e-5tiunv6pqg-stack/bcc6d950-7659-11ef-987d-06c5e3bac9c7 -r AWSEBAutoScalingGroup --region ap-northeast-2
+2024/09/19 07:36:39.318705 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:418272774858:stack/awseb-e-5tiunv6pqg-stack/bcc6d950-7659-11ef-987d-06c5e3bac9c7 -r AWSEBBeanstalkMetadata --region ap-northeast-2
+2024/09/19 07:36:39.786939 [INFO] Generating rsyslog config from Procfile
+2024/09/19 07:36:39.788561 [INFO] Running command: systemctl restart rsyslog.service
+2024/09/19 07:36:39.838587 [INFO] Executing instruction: PostBuildEbExtension
+2024/09/19 07:36:39.838625 [INFO] Starting executing the config set Infra-EmbeddedPostBuild.
+2024/09/19 07:36:39.838638 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:ap-northeast-2:418272774858:stack/awseb-e-5tiunv6pqg-stack/bcc6d950-7659-11ef-987d-06c5e3bac9c7 -r AWSEBAutoScalingGroup --region ap-northeast-2 --configsets Infra-EmbeddedPostBuild
+2024/09/19 07:36:40.341143 [INFO] Finished executing the config set Infra-EmbeddedPostBuild.
+
+2024/09/19 07:36:40.341178 [INFO] Executing instruction: CleanEbExtensions
+2024/09/19 07:36:40.341206 [INFO] Cleaned ebextensions subdirectories from app staging directory.
+2024/09/19 07:36:40.341209 [INFO] Executing instruction: RunAppDeployPreDeployHooks
+2024/09/19 07:36:40.341234 [INFO] Executing platform hooks in .platform/hooks/predeploy/
+2024/09/19 07:36:40.341250 [INFO] The dir .platform/hooks/predeploy/ does not exist
+2024/09/19 07:36:40.341253 [INFO] Finished running scripts in /var/app/staging/.platform/hooks/predeploy
+2024/09/19 07:36:40.341258 [INFO] Executing instruction: stop X-Ray
+2024/09/19 07:36:40.341262 [INFO] stop X-Ray ...
+2024/09/19 07:36:40.341272 [INFO] Running command: systemctl show -p PartOf xray.service
+2024/09/19 07:36:40.372731 [WARN] stopProcess Warning: process xray is not registered 
+2024/09/19 07:36:40.372823 [INFO] Running command: systemctl stop xray.service
+2024/09/19 07:36:40.392506 [INFO] Executing instruction: stop proxy
+2024/09/19 07:36:40.392549 [INFO] Running command: systemctl show -p PartOf httpd.service
+2024/09/19 07:36:40.411559 [WARN] deregisterProcess Warning: process httpd is not registered, skipping...
+
+2024/09/19 07:36:40.411593 [INFO] Running command: systemctl show -p PartOf nginx.service
+2024/09/19 07:36:40.427851 [WARN] deregisterProcess Warning: process nginx is not registered, skipping...
+
+2024/09/19 07:36:40.427878 [INFO] Executing instruction: FlipApplication
+2024/09/19 07:36:40.427882 [INFO] Fetching environment variables...
+2024/09/19 07:36:40.428105 [INFO] Purge old process...
+2024/09/19 07:36:40.428183 [INFO] Removing /var/app/current/ if it exists
+2024/09/19 07:36:40.428194 [INFO] Renaming /var/app/staging/ to /var/app/current/
+2024/09/19 07:36:40.428214 [INFO] Register application processes...
+2024/09/19 07:36:40.428217 [INFO] Registering the proc: web
+
+2024/09/19 07:36:40.428228 [INFO] Running command: systemctl show -p PartOf web.service
+2024/09/19 07:36:40.443046 [INFO] Running command: systemctl daemon-reload
+2024/09/19 07:36:40.735603 [INFO] Running command: systemctl reset-failed
+2024/09/19 07:36:40.745112 [INFO] Running command: systemctl is-enabled eb-app.target
+2024/09/19 07:36:40.755799 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb.target to /etc/systemd/system/eb-app.target
+2024/09/19 07:36:40.757002 [INFO] Running command: systemctl enable eb-app.target
+2024/09/19 07:36:41.115419 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/eb-app.target → /etc/systemd/system/eb-app.target.
+
+2024/09/19 07:36:41.115453 [INFO] Running command: systemctl start eb-app.target
+2024/09/19 07:36:41.124780 [INFO] Running command: systemctl enable web.service
+2024/09/19 07:36:41.455968 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/web.service → /etc/systemd/system/web.service.
+
+2024/09/19 07:36:41.456016 [INFO] Running command: systemctl show -p PartOf web.service
+2024/09/19 07:36:41.468271 [INFO] Running command: systemctl is-active web.service
+2024/09/19 07:36:41.477235 [INFO] Running command: systemctl start web.service
+2024/09/19 07:36:41.519449 [INFO] Executing instruction: start X-Ray
+2024/09/19 07:36:41.519469 [INFO] X-Ray is not enabled.
+2024/09/19 07:36:41.519473 [INFO] Executing instruction: start proxy with new configuration
+2024/09/19 07:36:41.519495 [INFO] Running command: /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2024/09/19 07:36:41.567592 [INFO] nginx: [warn] could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
+
+2024/09/19 07:36:41.567768 [INFO] Running command: cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2024/09/19 07:36:41.572964 [INFO] Running command: systemctl show -p PartOf nginx.service
+2024/09/19 07:36:41.591855 [INFO] Running command: systemctl daemon-reload
+2024/09/19 07:36:41.952709 [INFO] Running command: systemctl reset-failed
+2024/09/19 07:36:41.966078 [INFO] Running command: systemctl show -p PartOf nginx.service
+2024/09/19 07:36:41.982909 [INFO] Running command: systemctl is-active nginx.service
+2024/09/19 07:36:41.995075 [INFO] Running command: systemctl start nginx.service
+2024/09/19 07:36:42.219336 [INFO] Executing instruction: configureSqsd
+2024/09/19 07:36:42.219354 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2024/09/19 07:36:42.219359 [INFO] Executing instruction: startSqsd
+2024/09/19 07:36:42.219361 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2024/09/19 07:36:42.219365 [INFO] Executing instruction: Track pids in healthd
+2024/09/19 07:36:42.219370 [INFO] This is basic health env, skipping tracking pid in healthd...
+2024/09/19 07:36:42.219373 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2024/09/19 07:36:42.219474 [INFO] Executing platform hooks in .platform/hooks/postdeploy/
+2024/09/19 07:36:42.219497 [INFO] The dir .platform/hooks/postdeploy/ does not exist
+2024/09/19 07:36:42.219500 [INFO] Finished running scripts in /var/app/current/.platform/hooks/postdeploy
+2024/09/19 07:36:42.219506 [INFO] Executing cleanup logic
+2024/09/19 07:36:42.219621 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1726731398846,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1726731402219,"severity":"INFO"}]}]}
+
+2024/09/19 07:36:42.219635 [INFO] Platform Engine finished execution on command: app-deploy
+
+2024/09/19 07:38:29.584760 [INFO] Starting...
+2024/09/19 07:38:29.584816 [INFO] Starting EBPlatform-PlatformEngine
+2024/09/19 07:38:29.584843 [INFO] reading event message file
+2024/09/19 07:38:29.585057 [INFO] Engine received EB command cfn-hup-exec
+
+2024/09/19 07:38:29.658865 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:418272774858:stack/awseb-e-5tiunv6pqg-stack/bcc6d950-7659-11ef-987d-06c5e3bac9c7 -r AWSEBAutoScalingGroup --region ap-northeast-2
+2024/09/19 07:38:30.071612 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:418272774858:stack/awseb-e-5tiunv6pqg-stack/bcc6d950-7659-11ef-987d-06c5e3bac9c7 -r AWSEBBeanstalkMetadata --region ap-northeast-2
+2024/09/19 07:38:30.395288 [INFO] checking whether command tail-log is applicable to this instance...
+2024/09/19 07:38:30.395305 [INFO] this command is applicable to the instance, thus instance should execute command
+2024/09/19 07:38:30.395308 [INFO] Engine command: (tail-log)
+
+2024/09/19 07:38:30.395362 [INFO] Executing instruction: GetTailLogs
+2024/09/19 07:38:30.395371 [INFO] Tail Logs...
+2024/09/19 07:38:30.395834 [INFO] Running command: tail -n 100 /var/log/web.stdout.log
+2024/09/19 07:38:30.397950 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+112.155.252.29 - - [19/Sep/2024:07:38:17 +0000] "GET / HTTP/1.1" 502 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0" "208.54.104.184"
+112.155.252.29 - - [19/Sep/2024:07:38:18 +0000] "GET /favicon.ico HTTP/1.1" 502 150 "http://aplus-edu-env-2.eba-jzd7ikqp.ap-northeast-2.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2024/09/19 07:36:41 [warn] 1977#1977: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2024/09/19 07:36:42 [warn] 2011#2011: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2024/09/19 07:36:42 [warn] 2012#2012: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2024/09/19 07:38:17 [error] 2016#2016: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 112.155.252.29, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8000/", host: "aplus-edu-env-2.eba-jzd7ikqp.ap-northeast-2.elasticbeanstalk.com"
+2024/09/19 07:38:18 [error] 2016#2016: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 112.155.252.29, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:8000/favicon.ico", host: "aplus-edu-env-2.eba-jzd7ikqp.ap-northeast-2.elasticbeanstalk.com", referrer: "http://aplus-edu-env-2.eba-jzd7ikqp.ap-northeast-2.elasticbeanstalk.com/"
+
+
